@@ -49,7 +49,7 @@ const Home = () => {
       <>
       <div>
           <Current data = {data} />
-          <Week />
+          <Week data = {data} />
       </div>
       <div>
         <Details />
