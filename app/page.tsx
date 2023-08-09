@@ -33,35 +33,34 @@ const Home = () => {
   let content
   if(Object.keys(data).length === 0 && error === ''){
     content = (
-      <div>
-        <h2>Welcome to your favorite weather app</h2>
+      <div className="text-white text-center h-screen mt-14 px-12 sm:px-0">
+        <h2 className="text-2xl font-bold">Welcome to your favorite weather app</h2>
+        <p className="text-xl">Enter a city name to get the weather forecast</p>
       </div>
     )
   } else if(error !==""){
     content =(
-      <div>
-        <p>City not found</p>
-        <p>Enter a valid city</p>
+      <div className="text-white text-center h-screen mt-14 px-12 sm:px-0">
+        <p className="text-2xl font-bold">City not found</p>
+        <p className="text-xl">Enter a valid city</p>
       </div>
     )
   } else{
     content = (
       <>
-      <div className="flex md:flex-row flex-col p-12 items-center justify-between">
+      <div className="flex flex-col p-12 items-center justify-between">
           <Current data = {data} />
+          <Details data = {data} />
           <Week data = {data} />
-      </div>
-      <div>
-        <Details />
       </div>
       </>
     )
   }
   return (
-    <div className ="bg-cover bg-gradient-to-r from-blue-300 to-blue-500 h-screen">
-      <header className="flex flex-col justify-between items-center p-12 md:flex-row">
+    <div className ="bg-gradient-to-r from-blue-300 to-blue-500 h-fit lg:h-screen">
+      <header className="flex flex-col justify-between items-center px-12 pt-8 md:flex-row">
         <Input handleSearch={handleSearch} setLocation={setLocation}  />
-        <h1 className="mb-8 md:mb-0 order-1 text-white py-2 px-4 rounded-xl italic font-bold">easy weather</h1>
+        <h1 className="mb-8 md:mb-0 order-1 text-white text-xl italic font-bold">easy weather</h1>
       </header>
       {content}
     </div>

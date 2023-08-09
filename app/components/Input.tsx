@@ -6,7 +6,7 @@ interface InputProps{
     setLocation: React.Dispatch<React.SetStateAction<string>>
 }
 
-const Input = ({ handleSearch, setLocation }) => {
+const Input = ({ handleSearch, setLocation }: InputProps) => {
     return (
       
         <form className="bg-black/40 rounded-md p-3 flex items-center w-full md:w-2/4 order-2 md:order-1">
@@ -17,7 +17,7 @@ const Input = ({ handleSearch, setLocation }) => {
              onKeyDown={handleSearch}
              onChange={(e) => setLocation(e.target.value)}
             />
-            <MagnifyingGlass size={22} color="white"/>
+            <MagnifyingGlass className="ml-[-25px]" size={22} color="white"/>
         </form>
         
      );
