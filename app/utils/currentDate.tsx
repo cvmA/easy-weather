@@ -3,7 +3,7 @@ export const getCurrentDate = () =>{
     ('en-US',{
         weekday: "long",
         year: "numeric",
-        month: "long",
+        month: "short",
         day: "numeric"
     })
     return currentDate

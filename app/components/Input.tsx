@@ -7,8 +7,9 @@ interface InputProps{
 }
 
 const Input = ({ handleSearch, setLocation }) => {
-    return ( 
-        <form className="flex items-center w-full order-2 md:w-2/4 md:order-1">
+    return (
+      
+        <form className="bg-black/40 rounded-md p-3 flex items-center w-full md:w-2/4 order-2 md:order-1">
             <input
              type="text"
              placeholder="Search City"
@@ -16,8 +17,9 @@ const Input = ({ handleSearch, setLocation }) => {
              onKeyDown={handleSearch}
              onChange={(e) => setLocation(e.target.value)}
             />
-            <MagnifyingGlass color="white"/>
+            <MagnifyingGlass size={22} color="white"/>
         </form>
+        
      );
 }
  

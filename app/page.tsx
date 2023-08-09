@@ -47,7 +47,7 @@ const Home = () => {
   } else{
     content = (
       <>
-      <div>
+      <div className="flex md:flex-row flex-col p-12 items-center justify-between">
           <Current data = {data} />
           <Week data = {data} />
       </div>
