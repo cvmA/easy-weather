@@ -1,6 +1,14 @@
 import { ArrowDown, ArrowUp, ArrowsInLineVertical, Drop, Thermometer, Wind } from "@phosphor-icons/react";
 
-const Details = ({ data }) => {
+const Details = ({ data, error }) => {
+    if(error !==""){
+        return (
+          <div className="text-white text-center mt-14 px-12 sm:px-0">
+            <p className="text-2xl font-bold">City not found</p>
+            <p className="text-xl">Enter a valid city</p>
+          </div>
+        )
+    }
     return (
         <>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full mb-7">

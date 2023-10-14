@@ -8,7 +8,6 @@ interface InputProps{
 
 const Input = ({ handleSearch, setLocation }: InputProps) => {
     return (
-      
         <form className="bg-black/40 rounded-md p-3 flex items-center w-full md:w-2/4 order-2 md:order-1">
             <input
              type="text"
